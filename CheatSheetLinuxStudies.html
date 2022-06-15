@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang='pt-br'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Comandos Linux</title>
+</head>
+
+
+<body>
+	<header><h1>Curso Linux</h1></header>
+
+	<div>
+		<h1>COMO CRIAR UM USUÁRIO</h1>
+		<h2>criando  usuario</h2>
+		$sudo adduser <nome_usuario> 
+		<h2>Adicionando em um grupo</h2>
+		$sudo usermod -a -G sudo <nome_usuario>
+		<h2>logando no usuario</h2>
+		$su <nome_usuario>
+		
+		<h1>COMO MONTAR UM PENDRIVE</h1>
+		<h2>Verifique o diretóro aonde o pendive foi identificado</h2>
+		user@linux:~$ fdisk -l
+		<h3>EX: dev/sdc1</h3>
+		<h2>Crie uma pasta para que o dispositivo seja montado</h2>
+		user@linux:~$ mkdir /media/usb-drive
+		<h2>Monte o pendrive indicando o diretório que ele está e o diretório reservado para montagem</h2>
+		user@linux:~$ mount dev/sdc1 /media/usb-drive/
+		<h2>Verifique o resultado</h2>
+		user@linux:~$ mount | grep sdc1
+	</div>
+	
+	<div>
+		<h1>COMANDOS DIVERSOS</h1>
+		<li>
+			<ul>$uname -a (Mostra a distribuição e a versão do Kernel)</ul>
+			<ul>$sudo adduser <nome_usuario> (cria um usuario)</ul>
+			<ul>$sudo usermod -a -G [nome grupo] [nome usuario] (adiciona usuario em determinado grupo)</ul>
+			<ul>$sudo su [nome usuario] //loga no perfil</ul> 
+			<ul>$sudo groupadd [opções] [nome do grupo]</ul>
+			<ul>$echo (mostra o conteudo da variável de ambiente)</ul>
+			<ul>$sudo who (mostra os logins de usuários)</ul>
+			<ul>$sudo whoami (mostra os usuários logados)</ul>
+			<ul>$ls /[diretorio] |grep [string] (filtra palafra chave no diretorio)</ul>
+			<ul>$ls useradd -e 1999-12-31 (e = expire date, --expiredate; sintaxe ano/mês/dia)</ul>
+			<ul>#lspci (mostra informaçoes do fabricante e modelo dos dispositivos PCIs conectados)</ul>
+			<ul>$lsmod (lista os módulos carregados na memória)</ul>
+			<ul>$modinfo [Nome_Modulo] (fornece as informações de um dado módulo)</ul>
+			<ul>$insmod [Nome_arquivo] (carrega um módulo para a memória <strong>não resolve as dependências</strong>, ou seja outros softwares que podem ser necessários)</ul>
+			<ul>#modprobe [Nome_modulo] (utilizado para carregar um módulo, carrega todas dependencias necessárias.<strong>*Recomendável</strong>>)</ul>
+			<ul>#rmmod [Nome_modulo] (descarrega um módulo carregado na memória )</ul>
+			<ul>$lsusb (lista os dispositivos USBs conectados)</ul>
+			<ul>user@ip:/proc$ cat interrupts (Mosta canais que permite os que os outros programas façam requisições de interrupção ao processador)</ul>
+			<ul>user@ip:/proc$ cat ioports (Mostra as portas de entrada e saída disponíveis para dispositivos)</ul>
+			<ul>user@ip:/proc$ cat maininfo (Exibe informações da memória do dispositivo)</ul>
+			<ul>$systemctl status [Serviço] (Exibe o status de determinado programa ou serviço instalado. Se não for passadop um serviço como argumento o comando mostra uma arvore com serviços do computador)</ul>
+			<ul>$systemctl stop [Serviço] (Interrompe o funcionamento de determinado serviço)</ul>
+			<ul>$systemctl start [Serviço] (Inicia determinado serviço)</ul>
+			<ul>$systemclt enable [Serviço] (Desiguina um serviço para a carga de inicialização do sistema)</ul>
+			<ul></ul>
+			<ul></ul>
+		</li>
+	</div>
+	<div>
+		<h1>Dicionário</h1>
+		<li>
+			<ul>Datagrama</ul>
+			<ul>MAC adress: Media Access Control</ul>
+			<ul>OSI: Open System Interconection</ul>
+			<ul>TCP: Transport Control Protocol</ul>
+			<ul>IP: Internet Protocol</ul>
+			<ul>DNS: Domain Name System</ul>
+			<ul>HTTP: Hypertext Tranfer Protocol</ul>
+			<ul>ICMP: Internet Control Mansage Protocol</ul>
+			<ul>EFI</ul>
+			<ul>UEFI</ul>
+			<ul>FAT: File Alocate Table</ul>
+			<ul>systemctl: Sytem Controlling Interface and Inspection Toll</ul>
+		</li>
+	</div>
+</body>
